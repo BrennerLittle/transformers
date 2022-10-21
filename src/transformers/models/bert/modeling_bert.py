@@ -571,6 +571,7 @@ class BertEncoder(nn.Module):
 
         next_decoder_cache = () if use_cache else None
         for i, layer_module in enumerate(self.layer):
+            print("Debug: layer "+i)#custom debug 
             if output_hidden_states:
                 all_hidden_states = all_hidden_states + (hidden_states,)
 
