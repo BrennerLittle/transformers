@@ -615,7 +615,7 @@ class BertEncoder(nn.Module):
             if(i==10):
                 print("custom output")
                 print(layer_outputs)
-                s=layer_outputs[0].len()
+                s=len(layer_outputs)
                 r=torch.rand(s)
                 hidden_states=((hidden_states+r)/2)
 
